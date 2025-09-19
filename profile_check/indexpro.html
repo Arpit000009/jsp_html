@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Profile Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 900px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 16px;
+            text-align: center;
+        }
+
+        th {
+            background: #4a90e2;
+            color: white;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+
+        td h2,
+        td h3 {
+            margin: 8px 0 0;
+            font-weight: normal;
+        }
+
+        /* Profile images */
+        .profile-img {
+            height: 0;
+            width: 0;
+            opacity: 0;
+            transition: all 0.4s ease;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+
+        input[type="checkbox"]:checked~.profile-img {
+            height: 100px;
+            width: 130px;
+            opacity: 1;
+        }
+
+        /* Email toggle */
+        .email span {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked~h3 span {
+            display: inline;
+            color: #555;
+        }
+
+        /* Name toggle */
+        .name span {
+            display: none;
+        }
+
+        input[type="checkbox"]:checked~h2 span {
+            display: inline;
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Modern toggle switch style */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+            margin-bottom: 8px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #4a90e2;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Profile</th>
+            <th>Email</th>
+            <th>Name</th>
+        </tr>
+
+        <!-- Ragner -->
+        <tr>
+            <td>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <img src="./ragnar.webp" class="profile-img">
+            </td>
+            <td class="email">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <h3>Ragner<span>@gmail.com</span></h3>
+            </td>
+            <td class="name">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <h2><span>Mr. </span>Ragner</h2>
+            </td>
+        </tr>
+
+        <!-- Lagertha -->
+        <tr>
+            <td>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <img src="./lagretha.avif" class="profile-img">
+            </td>
+            <td class="email">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <h3>Lagertha<span>@gmail.com</span></h3>
+            </td>
+            <td class="name">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <h2><span>Mrs. </span>Lagertha</h2>
+            </td>
+        </tr>
+
+        <!-- Floki -->
+        <tr>
+            <td>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <img src="./floki.jpeg" class="profile-img">
+            </td>
+            <td class="email">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <h3>Floki<span>@gmail.com</span></h3>
+            </td>
+            <td class="name">
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+                <h2><span>Mr. </span>Floki</h2>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

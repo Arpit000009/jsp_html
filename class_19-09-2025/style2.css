@@ -1,0 +1,26 @@
+#demo:checked ~ p{
+    background-color: red;
+}
+
+#jim{
+    height: 200px;
+    width: 400px;
+    background: #000;
+}
+
+#red:checked ~ #jim{
+    background-color: red;
+    
+}
+#blue:checked ~ #jim{
+    background-color: blue;
+    
+}
+#green:checked ~ #jim{
+    background-color: green;
+    
+}
+#yellow:checked ~ #jim{
+    background-color: yellow;
+    
+}

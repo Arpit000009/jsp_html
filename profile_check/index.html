@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    table, th, td {
+        border-collapse: collapse;
+  border: solid black; 
+  table-layout: fixed; height: 130px; width: 180px;
+  background-color: antiquewhite;
+    }
+    #ragner_pro:checked +#ragner_img{
+        height: 100px;
+        width: 130px;
+    }
+    #ragner_id{
+        display: none;
+    }
+    #ragner_check:checked ~h3 #ragner_id{
+       display: inline;
+    }
+    #showname{
+        display: none;
+    }
+    #name:checked ~h2 #showname{
+        display: inline;
+    }
+
+
+
+
+</style>
+<body>
+    <table>
+        <tr>
+        <th><h1>PROFILE</h1></th>
+        <th><h1>EMAIL</h1></th>
+        <th><h1>NAME</h1></th>
+        </tr>
+        <tr>
+        <td> <input type="checkbox" id="ragner_pro"><img height="0px" src="./ragnar.webp" id="ragner_img"> </td>
+        <td> <input type="checkbox" id="ragner_check"> <h3>ragner<span id="ragner_id">@gmail.com</span></h3></td>
+        <td><input type="checkbox" id="name"><h2><span id="showname">Mr. </span>Ragner</h2></td>
+        </tr>
+        <tr>
+        <td> <input type="checkbox" id="ragner_pro"><img height="0px" src="./lagretha.avif" id="ragner_img"> </td>
+        <td> <input type="checkbox" id="ragner_check">
+            <h3>legertha<span id="ragner_id">@gmail.com</span></h3>
+        </td>
+        <td><input type="checkbox" id="name">
+            <h2><span id="showname">Mrs. </span>Legertha</h2>
+        </td>
+        </tr>
+        <tr>
+        <td> <input type="checkbox" id="ragner_pro"><img height="0px" src="./floki.jpeg" id="ragner_img"> </td>
+        <td> <input type="checkbox" id="ragner_check">
+        <h3>floki<span id="ragner_id">@gmail.com</span></h3>
+        </td>
+        <td><input type="checkbox" id="name">
+            <h2><span id="showname">Mr. </span>Floki</h2>
+        </td>
+        </tr>
+
+    </table>
+</body>
+</html>
