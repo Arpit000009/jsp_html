@@ -1,0 +1,40 @@
+*{
+    font-size: 30px;
+    text-align: justify;
+    text-align: center;
+
+    
+}
+p{
+    font-size: medium;
+}
+#upper:checked ~ p{
+    text-transform: uppercase;
+}
+#lower:checked ~ #para{
+    text-transform: lowercase;
+}
+#caps:checked ~ #para{
+    text-transform: capitalize;
+}
+#center:checked ~ p{
+    text-align: center;
+}
+#right:checked ~ #para{
+    text-align: right;
+}
+#justify:checked ~ #para{
+    text-align: justify;
+}
+#outline:checked ~ p{
+    text-decoration: overline;
+}
+#underline:checked ~ #para{
+    text-decoration: underline;
+}
+#line-through:checked ~ #para{
+    text-decoration: line-through;
+}
+#x:checked ~ p{
+
+}
